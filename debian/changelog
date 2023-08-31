@@ -1,5 +1,66 @@
-template-repository (1.0-1) unstable; urgency=medium
+openttd-openmsx (0.4.2-1) unstable; urgency=medium
 
-  * Initial release
+  * [057b24f] Update watch file
+  * [d8f4763] Add upstream metadata
+  * [6790004] Bump standards version to 4.6.0 (no changes required)
+  * [68f6fb5] New upstream release 0.4.2
+  * [6b0eedc] Remove patches merged upstream
+  * [9a43d61] Remove broken-symlink lintian override
+  * [14181f2] Disable MD5 sum checks for built files
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Tue, 23 Nov 2021 16:48:25 +0100
+
+openttd-openmsx (0.3.1-6) unstable; urgency=medium
+
+  * [16504fd] Backport patch for python3 compatibility
+  * [9866eca] Build using python3 (Closes: #967192)
+  * [4b7a180] Bump debhelper version to v13
+  * [460cf2d] Support DEB_BUILD_OPTIONS=terse
+  * [a368048] Bump standards version to 4.5.0
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Wed, 12 Aug 2020 20:12:48 +0200
+
+openttd-openmsx (0.3.1-5) unstable; urgency=medium
+
+  * [8d4a4d9] Bump debhelper version to v11
+  * [e50895b] Bump standards version to 4.1.4
+  * [5788744] Convert Priority: extra to optional
+  * [4a1655f] Mark as Multi-arch: foreign
+  * [57981d8] Respect nocheck in DEB_BUILD_OPTIONS
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Thu, 10 May 2018 21:45:36 +0200
+
+openttd-openmsx (0.3.1-4) unstable; urgency=medium
+
+  * [242be62] Fix build in some environments (Closes: #815062)
+  * [22f5fa6] Bump debhelper compatibility level to 9
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Mon, 07 Mar 2016 17:32:42 +0100
+
+openttd-openmsx (0.3.1-3) unstable; urgency=medium
+
+  * [5c2295d] Make builds verbose.
+  * [5a82c58] Update watch file, upstream changed download urls.
+  * [93fd324] Use canonical Vcs urls (on anonscm.debian.org).
+  * [f1c5821] Bump Standards-Version to 3.9.6, no changes required.
+  * [aed1c23] Install into /usr/share/games/openttd/baseset.
+  * [53c397f] Pass options to the Makefile directly
+  * [1f8bd50] Remove the version number from the install directory
+  * [52a87c5] Make readme, changelog and license available in-game
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Thu, 23 Oct 2014 13:20:32 +0200
+
+openttd-openmsx (0.3.1-2) unstable; urgency=low
+
+  * [7625507] Update watch file to new download location.
+  * [86d1a2f] Reword description to comply with the policy.
+  * [054a1d1] Bump Standards-Version to 3.9.3, no changes required.
+  * [524f269] Update copyright file to use the new copyright-format-1.0.
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Thu, 15 Mar 2012 12:34:30 +0100
+
+openttd-openmsx (0.3.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #591930)
+
+ -- Matthijs Kooijman <matthijs@stdin.nl>  Tue, 17 Aug 2010 19:49:20 +0200

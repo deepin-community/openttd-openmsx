@@ -1,0 +1,41 @@
+#
+# This file is part of the OpenMSX music set for OpenTTD.
+# OpenMSX is free content; you can redistribute it and/or modify it under the terms of the
+# GNU General Public License as published by the Free Software Foundation, version 2.
+# OpenMSX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details. You should have received a copy of
+# the GNU General Public License along with Swedish RailSet. If not, see
+# <http://www.gnu.org/licenses/>.
+#
+
+$(BASE_FILENAME).obm: $(LANG_FILES) $(MIDI_FILES) $(THEMES_FILE) Makefile Makefile.in Makefile.config
+	$(_E) "[Generating] $@"
+	@echo "[metadata]" > $@
+	@echo "name        = $(REPO_NAME)" >> $@
+	@echo "shortname   = $(REPO_SHORTNAME)" >> $@
+	@echo "version     = $(NEWGRF_VERSION)" >> $@
+	$(_V) $(SCRIPT_DIR)/translations.sh | sed 's/{TITLE}/$(REPO_TITLE)/' >> $@
+
+	@echo "" >> $@
+	@echo "[files]" >> $@
+	$(_V) cat $(THEMES_FILE) | scripts/playlist.py >> $@
+
+	@echo "" >> $@
+	@echo "[md5s]" >> $@
+	$(_V) cat $(THEMES_FILE) | scripts/sanitize_list.py | scripts/md5list.py >> $@
+
+	@echo "" >> $@
+	@echo "[names]" >> $@
+	$(_V) cat $(THEMES_FILE) | scripts/sanitize_list.py | scripts/namelist.py >> $@
+
+	@echo "" >> $@
+	@echo "[origin]" >> $@
+	@echo "$(REPO_ORIGIN)" >> $@
+	$(_E) "[Done] Basemusic successfully generated."
+	$(_E) ""
+
+music: $(BASE_FILENAME).obm
+
+clean::
+	$(_V) -rm $(BASE_FILENAME).obm

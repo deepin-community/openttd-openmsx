@@ -1,0 +1,14 @@
+################################################################
+# Definitions needed for tar releases
+# This part is automatically generated
+################################################################
+REPO_VERSION := 0.4.2
+REPO_REVISION := 7974
+NEWGRF_VERSION := 7974
+REPO_HASH := 8510c8d687ce61fd601b05cbcd9292986cc26ed8
+REPO_VERSION_STRING := 0.4.2
+REPO_TITLE := OpenMSX 0.4.2
+REPO_DATE := 20211031
+REPO_BRANCH := 
+GIT := :
+PYTHON := :

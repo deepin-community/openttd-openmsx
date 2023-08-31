@@ -1,0 +1,5 @@
+##grflangid 0x1e
+##plural 2
+##gender n m f
+##case date geniki subs
+STR_GENERAL_DESC        :Βασικό πακέτο μουσικής OpenMSX για το OpenTTD. Ελεύθερα διαθέσιμο υπό τους όρους της άδειας GPL v2. Για τα πλήρη εύσημα δείτε το αρχείο "readme.txt" [{TITLE}]
